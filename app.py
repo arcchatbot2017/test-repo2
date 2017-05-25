@@ -11,6 +11,11 @@ from flask import make_response
 # Flask app should start in global layout
 app = Flask(__name__)
 
+@app.route('/hello')
+def helloword():
+    print("At Least I work")
+
+
 
 @app.route('/webhook', methods=['POST'])
 def webhook():
